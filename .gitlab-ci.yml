@@ -1,4 +1,7 @@
-build-job:
+stages:
+  - publish
+  
+publish:
   image: docker:latest
   stage: publish
   services:
