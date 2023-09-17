@@ -7,6 +7,6 @@ publish:
   services:
     - docker:dind
   script:
-    - docker build -t my-angular-image .
-    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
-    - docker push my-angular-image
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker build -t registry.gitlab.com/angular7044537/my-angular-app .
+    - docker push registry.gitlab.com/angular7044537/my-angular-app
