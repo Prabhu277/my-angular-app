@@ -1,4 +1,9 @@
-build-job:
-  stage: build
+publish:
+  image: docker:latest
+  stage: publish
+  services:
+    - docker:dind
   script:
-    - echo "Hello, This is Angular"
+    - docker build -t my-angular-image .
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker push my-angular-image
