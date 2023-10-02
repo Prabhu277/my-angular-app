@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/03ada23b-2813-4ba0-926e-ad6b3787d6fa/resourceGroups/linuxAzure/providers/Microsoft.Web/sites/testAzureDevopsAngularApp",
+    "appService.deploySubpath": "dist"
+}
